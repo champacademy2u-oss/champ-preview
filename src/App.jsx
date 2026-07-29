@@ -6,7 +6,8 @@ const getAssetUrl = (path) => {
   return `${import.meta.env.BASE_URL}${cleanPath}`;
 };
 
-const WHATSAPP_LINK = 'https://wa.me/60123456789?text=%E6%82%A8%E5%A5%BD%EF%BC%8C%E6%88%91%E6%9C%89%E5%85%B4%E8%B6%A3%E5%8F%82%E5%8A%A0%E3%80%90%E6%97%A0%E9%99%90%E6%9D%A0%E6%9D%86%EF%BD%9CFacebook%20%E8%90%A5%E9%94%80%E8%AE%AD%E7%BB%83%E8%90%A5%E3%80%91%EF%BC%8C%E6%83%B3%E4%BA%86%E8%A7%A3%E6%9B%B4%E5%A4%9A%E8%AF%A6%E6%83%85%E3%80%82'
+const WHATSAPP_LINK = 'https://wa.me/60107790001?text=%E6%82%A8%E5%A5%BD%EF%BC%8C%E6%88%91%E6%9C%89%E5%85%B4%E8%B6%A3%E5%8F%82%E5%8A%A0%E3%80%90%E6%97%A0%E9%99%90%E6%9D%A0%E6%9D%86%EF%BD%9CFacebook%20%E8%90%A5%E9%94%80%E8%AE%AD%E7%BB%83%E8%90%A5%E3%80%91%EF%BC%8C%E6%83%B3%E4%BA%86%E8%A7%A3%E6%9B%B4%E5%A4%9A%E8%AF%A6%E6%83%85%E3%80%82'
+const WHATSAPP_ELVIN = 'https://wa.me/601111118661?text=%E6%82%A8%E5%A5%BD%EF%BC%8C%E6%83%B3%E4%BA%86%E8%A7%A3%E6%9B%B4%E5%A4%9A%E8%AF%A6%E6%83%85%E3%80%82'
 const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbywkS3XXyHoJLNnfcNjPo707vGsK_oYYThl8bNlCTRVEY3X6DOKrZZbXPXUf4pQQMI/exec'
 const FB_GROUP_LINK = 'https://www.facebook.com/groups/champacademy'
 const VIDEO_SRC = 'https://video.wixstatic.com/video/0d678a_1883575fdebb45b0b15b4ca5df37e4b1/1080p/mp4/file.mp4'
@@ -30,7 +31,7 @@ const STATE_OPTIONS = [
 ]
 
 const LESSONS = [
-  { num: '课堂 01', tag: '打造赚钱机器 策略 1', title: '拆解【打造赚钱机器核心思维】：如何用同样的资源，放大 10 倍以上的结果', tag2: '学习为什么"模式 > 努力"，以及企业如何从"体力生意"进化到"杠杆生意"', locked: false },
+  { num: '课堂 01', tag: '无限杠杆 策略 1', title: '拆解【无限杠杆核心思维】：如何用同样的资源，放大 10 倍以上的结果', tag2: '学习为什么"模式 > 努力"，以及企业如何从"体力生意"进化到"杠杆生意"', locked: false },
   { num: '课堂 02', tag: '企业设计 策略 1', title: '教你如何根据公司阶段（100K / 300K / 1M / 5M+）设计适合的商业模式', tag2: '帮你找出企业卡关的原因，并制定一份初步的"增长蓝图"', locked: false },
   { num: '课堂 03', tag: 'Ad 广告/讨论调整1', title: '广告实战第一步：如何设定精准受众与预算', tag2: '学员广告案例分享 + 教练逐个点评与调整', locked: false },
   { num: '课堂 04', tag: 'Ad 广告收网 / 讨论调整 2', title: '如何通过"收网"把广告点击转化为实际成交', tag2: '教练逐个优化学员广告表现，避免无效消耗', locked: false },
@@ -39,17 +40,17 @@ const LESSONS = [
   { num: '课堂 07', tag: '高阶投放实战', title: '多维度混合媒介矩阵（混合图文、多组短视频、高频直营）玩法', tag2: '已锁定内容 · 报名后解锁', locked: true },
   { num: '课堂 08', tag: '团队杠杆落地', title: '构建能独立运行的获客与跟进团队系统，解放创始人时间', tag2: '已锁定内容 · 报名后解锁', locked: true },
   { num: '课堂 09', tag: '私域价值挖掘', title: '私域运营模组：如何利用低获客成本做后链路留存与裂变', tag2: '已锁定内容 · 报名后解锁', locked: true },
-  { num: '课堂 10', tag: '战略落地方案', title: '打造赚钱机器 5.0 项目落地方案梳理与一对一答辩纠偏', tag2: '已锁定内容 · 报名后解锁', locked: true }
+  { num: '课堂 10', tag: '战略落地方案', title: '无限杠杆 5.0 项目落地方案梳理与一对一答辩纠偏', tag2: '已锁定内容 · 报名后解锁', locked: true }
 ]
 
 const FAQS = [
-  { q: '谁适合参与这个课程？', a: '如果你广告费越来越高、顾客越来越难成交，或者公司发展卡在某个阶段，这场【企业打造赚钱机器】训练营就是为你准备的。' },
-  { q: '请问主讲人是 Ryan 教练吗？', a: '是的，整个 3 个月的 11 堂课都会由 Ryan 教练亲自带领，结合 9000 万广告操盘经验与 150 个行业第一案例，带你实战掌握【打造赚钱机器】。' },
+  { q: '谁适合参与这个课程？', a: '如果你广告费越来越高、顾客越来越难成交，或者公司发展卡在某个阶段，这场【无限杠杆｜Facebook营销训练营】就是为你准备的。' },
+  { q: '请问主讲人是 Ryan 教练吗？', a: '是的，整个 3 个月的 11 堂课都会由 Ryan 教练亲自带领，结合 9000 万广告操盘经验与 150 个行业第一案例，带你实战掌握【无限杠杆】。' },
   { q: '请问在哪里上课？', a: '这是一个线上课程，将通过 Zoom 举行，任何地区的企业主都可以在线参与学习。' },
   { q: '请问可以看重播吗？', a: '不会提供录影！因为课程内容涉及大量真实案例与最新策略，我们坚持保密，小班制，只对现场学员开放。' },
-  { q: '请问课程几点开始？', a: '课程时间为 8:30 till Late。下一期开课时间：2026年8月20日。' },
-  { q: '请问课程收费多少？', a: '课程原价 RM388。但这次特别开放优惠，Ryan教练送30位免费票🎫！马上报名获取位子（第31位开始收费）。只限100位学员，位子有限！' },
-  { q: '请问报名后，下一步要做什么？', a: '只要填写正确的 Email 与电话号码，你会收到确认通知。这代表你已正式锁定名额，进入【企业打造赚钱机器】。记得把课程时间记好，务必全程出席！' }
+  { q: '请问课程几点开始？', a: '课程为期 3 个月，每周三上午 10:30am – 12:00pm。下一期开课时间：2026年 6 月 3 日（周三）。' },
+  { q: '请问课程收费多少？', a: '课程总价值超过 RM8XXX。但这期【无限杠杆5.0】特别开放优惠，只需 RM3,864（折合每月 RM1,288）。⚠ 名额只限 15 家企业，额满即恢复原价。' },
+  { q: '请问报名后，下一步要做什么？', a: '只要填写正确的 Email 与电话号码，你会收到确认通知。这代表你已正式锁定名额，进入【无限杠杆｜Facebook营销训练营】。记得把课程时间记好，务必全程出席！' }
 ]
 
 function useWindowSize() {
@@ -273,20 +274,20 @@ export default function App() {
           <div className="flex flex-col items-center">
             <img 
               src={getAssetUrl("assets/hero-instructor-updated-D8zo6JTK.png")} 
-              alt="Louis Loh" 
+              alt="Ryan Lim" 
               className="max-w-sm md:max-w-xl w-full mb-4 object-contain" 
             />
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground leading-tight">
-            企业打造
-            <span className="block text-accent mt-2">赚钱机器</span>
+            无限杠杆
+            <span className="block text-accent mt-2">Facebook营销训练营</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-primary-foreground/90 font-medium max-w-2xl mx-auto">
-            只需要3个月，让你的企业拥有一套
+            只需要3个月，就能用无限杠杆的营销模式
             <br />
-            <span className="text-accent font-bold">「流量 × 成交 × 复购 × 裂变」自动赚钱系统</span>
+            <span className="text-accent font-bold">帮你搭建、启动、放大你的生意！</span>
           </p>
 
           <div className="max-w-3xl mx-auto">
@@ -307,17 +308,17 @@ export default function App() {
               <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-              <span className="font-semibold">20/08/2026</span>
+              <span className="font-semibold">6 月 3 日 2026 (10堂线上课程)</span>
             </div>
             <div className="flex items-center gap-2 bg-primary-foreground/10 backdrop-blur-sm px-6 py-3 rounded-lg">
               <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span className="font-semibold">8:30 till Late</span>
+              <span className="font-semibold">每周三 10:30-12:00</span>
             </div>
             <div className="flex items-center gap-2 bg-primary-foreground/10 backdrop-blur-sm px-6 py-3 rounded-lg">
               <img src={getAssetUrl("assets/zoom-logo-updated-DjpWGTsc.png")} alt="Zoom" className="h-6" />
-              <span className="text-primary-foreground font-semibold text-lg">线上</span>
+              <span className="text-primary-foreground font-semibold text-lg">线上 Zoom</span>
             </div>
           </div>
         </div>
@@ -337,14 +338,14 @@ export default function App() {
           
           <div className="space-y-6">
             <h2 className="text-3xl md:text-5xl font-black text-primary-foreground">
-              什么是<span className="text-accent">打造赚钱机器？</span>
+              什么是<span className="text-accent">【无限杠杆】？</span>
             </h2>
             <p className="text-lg md:text-xl text-primary-foreground/90 leading-relaxed max-w-3xl mx-auto">
               <span className="block text-2xl md:text-3xl">
-                在过去十年中，Ryan 教练通过其创新的<span className="text-yellow-500 font-bold">打造赚钱机器模式</span>，成功助力超过<span className="text-yellow-500 font-bold">100家企业</span>实现业绩的<span className="text-yellow-500 font-bold">数倍至百倍增长</span>。
+                在过去十年中，Ryan 教练通过其创新的<span className="text-yellow-500 font-bold">无限杠杆模式</span>，成功助力超过<span className="text-yellow-500 font-bold">100家企业</span>实现业绩的<span className="text-yellow-500 font-bold">数倍至百倍增长</span>。
               </span>
               <span className="block mt-4 text-2xl md:text-3xl">
-                就是建立一套能够<span className="text-yellow-500 font-bold">持续引流、稳定成交、高效运营、不断复购与裂变</span>的商业系统，让企业<span className="text-yellow-500 font-bold">不再依赖老板</span>，而是依靠系统<span className="text-yellow-500 font-bold">持续创造利润</span>。
+                这一系统不仅推动了企业从<span className="text-yellow-500 font-bold">100K 突破至 1M</span>，更成为众多<span className="text-yellow-500 font-bold">高速成长企业</span>的核心驱动力。
               </span>
             </p>
           </div>
@@ -380,17 +381,17 @@ export default function App() {
           {/* Pricing Highlight block */}
           <div className="space-y-6">
             <div className="text-primary-foreground font-bold leading-relaxed space-y-2">
-              <span className="block text-2xl line-through opacity-70">原价RM388</span>
+              <span className="block text-2xl line-through opacity-70">原价 RM8,888</span>
               <span className="block text-3xl md:text-4xl text-yellow-500 font-extrabold mt-2">
-                Ryan教练送30位免费票🎫
+                现在一个月才 RM1,288
               </span>
             </div>
             <div className="text-accent font-bold mt-4 space-y-2">
               <span className="block text-2xl md:text-3xl text-white">
-                马上报名获取位子 （第31位开始收费）
+                3 个月加起来只需 RM3,864
               </span>
               <span className="block text-3xl md:text-4xl text-yellow-400 font-black mt-2">
-                只限100位学员，位子有限！
+                ⚠ 马上报名每堂课只给 15 家公司
               </span>
             </div>
             <button 
@@ -415,13 +416,14 @@ export default function App() {
           
           <div className="text-center">
             <h2 className="text-3xl md:text-5xl font-black text-primary-foreground mb-8">
-              【打造赚钱机器】能解决什么？
+              【无限杠杆】能解决什么？
             </h2>
             <p className="text-xl md:text-2xl text-yellow-500 font-bold mb-6 text-left">
-              很多企业老板都会陷入这样的困惑：
+              除了努力，你还缺的就是——【无限杠杆】
             </p>
             <div className="space-y-4 mb-8 text-left">
               {[
+                "因为市场已经彻底改变：没有\"可复制、可放大\"的杠杆系统，再多广告都只是烧钱！",
                 "到底现在该先打品牌，还是先跑量？",
                 `公司做到了 100K、300K、1M、5M+，
 每个阶段的打法到底该怎么选？`,
@@ -443,9 +445,9 @@ export default function App() {
               <div className="bg-gradient-to-br from-yellow-500/20 to-orange-500/20 border-2 border-yellow-500/50 rounded-2xl p-6 my-6">
                 <div className="grid grid-cols-3 gap-4">
                   {[
-                    { label: '空', sub: '线上流量' },
-                    { label: '陆', sub: '内容品牌' },
-                    { label: '海', sub: '成交系统' }
+                    { label: '空', sub: '线上精准流量' },
+                    { label: '陆', sub: '内容品牌心智' },
+                    { label: '海', sub: '高效成交系统' }
                   ].map((item, idx) => (
                     <div key={idx} className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-4 text-center border border-yellow-500/30">
                       <div className="text-yellow-500 font-bold text-xl mb-2">{item.label}</div>
@@ -460,7 +462,7 @@ export default function App() {
               </div>
 
               <p className="text-lg md:text-xl text-primary-foreground leading-relaxed font-medium">
-                当你真正学会<span className="text-yellow-500 font-bold">"打造赚钱机器"</span>的逻辑，
+                当你真正学会<span className="text-yellow-500 font-bold">"无限杠杆"</span>的逻辑，
               </p>
               <p className="text-lg md:text-xl text-primary-foreground leading-relaxed font-medium">
                 你会发现，<span className="text-yellow-500">策略、工具与团队的力量可以彼此叠加</span>——
@@ -495,7 +497,7 @@ export default function App() {
             {/* Learn capabilities block */}
             <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl p-8 md:p-12 border border-primary/20 mt-12 text-left">
               <h3 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-6 text-center">
-                学会【打造赚钱机器】你就拥有：
+                学会【无限杠杆】你就拥有：
               </h3>
               
               <div className="flex flex-col items-center gap-8 max-w-xl mx-auto">
@@ -527,7 +529,7 @@ export default function App() {
                 <p className="text-lg">你已经</p>
                 <p className="text-lg font-bold text-green-400">能看清局势、快速复制、持续增长！</p>
                 <p className="text-xl md:text-3xl font-black mt-4 text-yellow-500">
-                  这就是【打造赚钱机器】的价值！
+                  这就是【无限杠杆】的价值！
                 </p>
               </div>
             </div>
@@ -594,7 +596,7 @@ export default function App() {
               <span className="block sm:inline">那答案很可能是：</span>
             </p>
             <p className="text-2xl md:text-3xl text-accent font-black">你缺的不是努力，而是——</p>
-            <p className="text-4xl text-primary-foreground font-black mt-4 md:text-5xl">【打造赚钱机器】</p>
+            <p className="text-4xl text-primary-foreground font-black mt-4 md:text-5xl">【无限杠杆】</p>
             <p className="text-4xl text-primary-foreground font-black mt-2 md:text-5xl">营销战略！</p>
             
             <button 
@@ -637,7 +639,7 @@ export default function App() {
               },
               {
                 title: "中小企业 SME",
-                desc: "广告费越来越高，成交越来越低，需要一套可复制的杠杆模式",
+                desc: "广告费越来越高，成交越来越低，急需一套可复制的杠杆模式",
                 icon: (
                   <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -646,7 +648,7 @@ export default function App() {
               },
               {
                 title: "营销 / 销售主管",
-                desc: "想掌握一套系统化战略，带领团队执行，不再盲目乱打",
+                desc: "想掌握一套系统化战略，带领团队高效执行",
                 icon: (
                   <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2z" />
@@ -695,13 +697,14 @@ export default function App() {
           
           <div className="text-center mb-12">
             <div className="inline-block bg-accent/90 text-accent-foreground px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4">
-              课程大纲
+              10堂课程精华
             </div>
             <h2 className="text-3xl md:text-5xl font-black text-primary-foreground mb-4">
-              企业打造赚钱机器 训练营
+              无限杠杆 Facebook营销训练营
+              <span className="text-accent block mt-2 text-3xl md:text-5xl">3个月课程内容</span>
             </h2>
             <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto">
-              系统性课程，线上直播
+              （无限杠杆5.0 课堂会根据市场成功模式更改，下面目录只限参考）
             </p>
           </div>
 
@@ -764,9 +767,19 @@ export default function App() {
             })}
           </div>
 
+          {/* Extra Bonus Card */}
+          <div className="mt-8 p-6 bg-gradient-to-r from-yellow-500/20 to-accent/20 border-2 border-yellow-500 rounded-2xl text-left">
+            <h3 className="text-xl md:text-2xl font-bold text-yellow-400 mb-2">
+              🎁 额外限时福利：1对1 个人企业落地指导 (5个月内)
+            </h3>
+            <p className="text-primary-foreground/90 text-base md:text-lg">
+              Ryan Lim 教练亲自帮你调整企业模式，针对个人企业情况定制战略，确保你公司能真正落地！
+            </p>
+          </div>
+
           {/* Yellow clickable lock banner */}
           <div 
-            className="mt-12 mb-6 text-center cursor-pointer" 
+            className="mt-8 mb-6 text-center cursor-pointer" 
             onClick={() => document.getElementById("register-section")?.scrollIntoView({ behavior: 'smooth' })}
           >
             <div className="inline-block bg-[hsl(43_96%_56%)]/20 border-2 border-[hsl(43_96%_56%)] px-8 py-4 rounded-xl hover:scale-105 transition-all">
@@ -975,9 +988,9 @@ export default function App() {
           
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-black text-foreground mb-4">
-              立即报名 <span className="text-primary block mt-2">开启增长之路</span>
+              填写报名表 · 抢占 15 位优惠名额
             </h2>
-            <p className="text-xl text-muted-foreground">只需3个月，让你的企业拥有一套「流量 × 成交 × 复购 × 裂变」自动赚钱系统</p>
+            <p className="text-xl text-muted-foreground">只需3个月，掌握无限杠杆营销系统</p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8 items-start">
@@ -986,7 +999,7 @@ export default function App() {
             <div className="space-y-4 text-left">
               <h3 className="text-2xl font-bold text-foreground mb-6">课程包含：</h3>
               
-              {["自动赚钱系统", "「流量 × 成交 × 复购 × 裂变」", "实战案例分析", "AI工具应用指导"].map((w, h) => (
+              {["3个月系统化学习", "每周1.5小时线上课程", "实战案例分析", "AI工具应用指导"].map((w, h) => (
                 <div key={h} className="flex items-center gap-3">
                   <div className="flex-shrink-0 w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center">
                     <svg className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1000,13 +1013,13 @@ export default function App() {
               <div className="mt-8 p-6 bg-gradient-to-br from-primary to-primary/80 rounded-2xl shadow-xl">
                 <div className="space-y-3 text-primary-foreground">
                   <p className="text-lg">
-                    <span className="font-bold">课程时间：</span>8:30 till Late
+                    <span className="font-bold">课程时间：</span>每周三上午 10:30–12:00
                   </p>
                   <p className="text-lg">
                     <span className="font-bold">上课方式：</span>线上 Zoom
                   </p>
                   <p className="text-lg">
-                    <span className="font-bold">课程日期：</span>20/08/2026
+                    <span className="font-bold">课程日期：</span>6月3日 (10堂线上课程)
                   </p>
                   <p className="text-2xl font-black text-accent mt-4 animate-pulse">
                     名额有限，先到先得！
@@ -1022,12 +1035,24 @@ export default function App() {
             </div>
             
           </div>
+
+          <div className="text-center mt-12 pt-8 border-t border-border space-y-4">
+            <p className="text-lg text-foreground">如果有任何疑问，请联系：</p>
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8">
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-primary underline">
+                Ryan Lim +60107790001
+              </a>
+              <a href={WHATSAPP_ELVIN} target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-primary underline">
+                Elvin +601111118661
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="py-12 text-center text-muted-foreground text-sm border-t border-border bg-card">
-        <p className="font-bold text-foreground text-base mb-2">企业打造赚钱机器</p>
+        <p className="font-bold text-foreground text-base mb-2">无限杠杆 | Facebook营销训练营</p>
         <p>© {new Date().getFullYear()} ChampAcademy. All rights reserved.</p>
         <p className="mt-2">
           <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="underline hover:text-accent transition-colors">联系 WhatsApp</a>
