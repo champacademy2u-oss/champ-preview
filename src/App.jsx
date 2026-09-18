@@ -12,7 +12,7 @@ const WHATSAPP_CONTACTS = [
   { name: 'Elvin', phone: '+601111118661', link: `https://wa.me/601111118661?text=${WHATSAPP_MESSAGE}` }
 ]
 const WHATSAPP_LINK = WHATSAPP_CONTACTS[0].link
-const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbywkS3XXyHoJLNnfcNjPo707vGsK_oYYThl8bNlCTRVEY3X6DOKrZZbXPXUf4pQQMI/exec'
+const FORM_ENDPOINT = 'https://champion-course-video-room.vercel.app/api/preview-registration'
 const VIDEO_SRC = 'https://video.wixstatic.com/video/0d678a_1883575fdebb45b0b15b4ca5df37e4b1/1080p/mp4/file.mp4'
 
 const STATE_OPTIONS = [
@@ -138,6 +138,7 @@ function ImageCarousel({ images, desktopSlides = 3, autoplayDelay = 2000, hasLog
 function RegisterForm() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', state: '' })
   const [status, setStatus] = useState('idle')
+  const [errorMessage, setErrorMessage] = useState('')
   const [showSuccess, setShowSuccess] = useState(false)
 
   const handleChange = e => setForm(prev => ({ ...prev, [e.target.name]: e.target.value }))
@@ -146,23 +147,28 @@ function RegisterForm() {
     e.preventDefault()
     if (!form.name || !form.email || !form.phone || !form.state) return
     setStatus('submitting')
+    setErrorMessage('')
     try {
-      await fetch(FORM_ENDPOINT, {
+      const response = await fetch(FORM_ENDPOINT, {
         method: 'POST',
-        mode: 'no-cors',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          date: new Date().toLocaleString("en-MY", { timeZone: "Asia/Kuala_Lumpur", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false }),
+          course: 'champ-preview',
           name: form.name,
           email: form.email,
           phone: form.phone,
           state: form.state
         }),
       })
+      const result = await response.json().catch(() => ({}))
+      if (!response.ok || result.ok !== true) {
+        throw new Error(result.error || '提交失败，请稍后重试')
+      }
       setStatus('success')
       setShowSuccess(true)
-    } catch {
+    } catch (error) {
       setStatus('error')
+      setErrorMessage(error.message === 'Failed to fetch' ? '暂时无法连接报名服务，请稍后重试' : error.message)
     }
   }
 
@@ -231,7 +237,7 @@ function RegisterForm() {
         </select>
       </div>
       {status === 'error' && (
-        <p className="text-red-400 text-sm text-center">提交失败，请重试</p>
+        <p role="alert" className="text-red-400 text-sm text-center">{errorMessage}</p>
       )}
       <button
         type="submit" disabled={status === 'submitting'}
